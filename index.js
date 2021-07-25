@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const express = require('express')
 const app = express()
 const morgan = require('morgan')
@@ -17,4 +19,3 @@ const server = http.createServer(app)
 server.listen(app.get('port'), () => {
     console.log('Server is up.')
 })
-
