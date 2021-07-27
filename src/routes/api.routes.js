@@ -71,7 +71,7 @@ router.post('/signup', async (req, res) => {
 
         res.json({
             error: false,
-            user: finalUser
+            finalUser
         })
 
     } catch (error) {
