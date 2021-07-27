@@ -42,8 +42,6 @@ router.post('/signup', async (req, res) => {
                 userId: finalUser._id
             }).save({ session })
 
-
-
         } else {
             // create credit card in pagarme
             const createCreditCard = await pagarme.createCreditCard({
@@ -72,7 +70,8 @@ router.post('/signup', async (req, res) => {
         session.endSession()
 
         res.json({
-            error: false
+            error: false,
+            user: finalUser
         })
 
     } catch (error) {
