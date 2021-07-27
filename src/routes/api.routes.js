@@ -158,7 +158,7 @@ router.get('/address/:address', async (req, res) => {
     }
 })
 
-router.get('/pre-ride', async (req, res) => {
+router.post('/pre-ride', async (req, res) => {
     try {
         const { origin, destination } = req.body
         const routeRequest = await googleMaps.getRoute(origin, destination)
