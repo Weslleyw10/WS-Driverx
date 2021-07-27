@@ -71,7 +71,7 @@ router.post('/signup', async (req, res) => {
 
         res.json({
             error: false,
-            finalUser
+            user: finalUser
         })
 
     } catch (error) {
@@ -201,8 +201,5 @@ router.get('/pre-ride', async (req, res) => {
         
     }
 })
-
-
-
 
 module.exports = router
