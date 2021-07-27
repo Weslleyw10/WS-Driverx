@@ -194,7 +194,12 @@ router.get('/pre-ride', async (req, res) => {
 
         const priceRide = ((distance.value / 1000) * 2.67).toFixed(2)
 
-        res.json({ error: false, distance, duration, priceRide, start_address, end_address, route})
+        res.json({ 
+            error: false, 
+            info: {
+                distance, duration, priceRide, start_address, end_address, route
+            }
+        })
         
     } catch (error) {
         res.json({ error: true, message: error.message })
